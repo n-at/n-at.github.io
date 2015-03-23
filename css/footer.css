@@ -1,0 +1,15 @@
+.footer {
+  border-top: #B9B9B9 solid 1px;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+.footer .name {
+  color: #B9B9B9;
+  font-size: 0.8em;
+}
+.footer .social a {
+  margin-left: 5px;
+}
+.footer .social a:first-of-type {
+  margin-left: 0;
+}
