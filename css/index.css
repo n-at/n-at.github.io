@@ -1,6 +1,42 @@
+body {
+    padding-top: 50px;
+    background-color: #fafafa;
+}
+
 .gradient-box {
-  margin-top: -30px;
   padding: 150px 0;
   color: white;
   background: linear-gradient(to bottom right, #16a085 25%, #f1c40f 75%);
+}
+.gradient-box h1 {
+    font-family: 'Jura', sans-serif;
+    font-size: 4em;
+}
+
+.footer {
+    margin-top: 15px;
+}
+.footer .name {
+    color: #a0a0a0;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.2em;
+}
+.footer .social {
+    margin-top: 10px;
+}
+.footer .social a {
+    color: #16a085;
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+.footer .social a:hover {
+    color: #f1c40f;
+    text-decoration: none;
+}
+.footer .social a:active {
+    color: #f1c40f;
+    text-decoration: none;
+}
+.footer .social a:first-of-type {
+    margin-left: 0;
 }
