@@ -29,14 +29,12 @@ body {
     margin-left: 15px;
     font-size: 1.5em;
 }
-.footer .social a:hover {
+.footer .social a:hover,
+.footer .social a:active{
     color: #f1c40f;
     text-decoration: none;
 }
-.footer .social a:active {
-    color: #f1c40f;
-    text-decoration: none;
-}
+
 .footer .social a:first-of-type {
     margin-left: 0;
 }

@@ -1,0 +1,67 @@
+body {
+    padding-top: 50px;
+}
+
+.gradient-box {
+    padding: 50px 0;
+    color: white;
+    background: linear-gradient(to bottom right, #16a085 10%, #f1c40f 90%);
+}
+.title img {
+    border-radius: 5px;
+}
+.title .name {
+    font-family: 'Jura', sans-serif;
+    font-size: 2.5em;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.section-title {
+    font-family: 'Jura', sans-serif;
+    color: #555;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.section-title ~ hr {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.education,
+.projects,
+.skills {
+    font-size: 1.2em;
+}
+.projects li,
+.skills li {
+    padding-bottom: 5px;
+}
+
+a.npm {
+    color: #da0000;
+}
+a.npm:hover,
+a.npm:active {
+    color: #d00000;
+}
+
+a.github {
+    color: #16a085;
+}
+a.github:hover,
+a.github:active {
+    color: #16d7bc;
+}
+
+a.docker {
+    color: #00b1ff;
+}
+a.docker:hover,
+a.docker:active {
+    color: #08c;
+}
+
+.footer {
+    margin-bottom: 20px;
+}
