@@ -62,6 +62,12 @@ a.docker:active {
     color: #08c;
 }
 
+ul.opensource a {
+    font-family: 'Jura', sans-serif;
+    font-size: 2em;
+    color: #16a085;
+}
+
 .footer {
     margin-bottom: 20px;
 }
