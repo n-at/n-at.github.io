@@ -1,189 +1,117 @@
+---
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
+
+    {% assign me = site.data.me %}
+    {% assign title = me.title %}
+    {% assign edu = me.edu %}
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Jura&subset=latin,cyrillic'>
     <link rel="stylesheet" href="css/me.css">
 
-    <title>About me</title>
+    <title>{{title.html_title}}</title>
 </head>
 <body>
 
 <div class="gradient-box">
     <div class="container title">
-        <img src="//gravatar.com/avatar/0a3cffedce512596ba158a45751c6478?s=100" alt="avatar">
-        <h1 class="name">Алексей Нургалиев</h1>
+        <img src="//gravatar.com/avatar/{{title.gravatar_id}}?s=100" alt="avatar">
+        <h1 class="name">{{title.name}}</h1>
     </div>
 </div>
 
 <div class="container">
-    <h2 class="section-title">Образование</h2>
+
+    <h2 class="section-title">{{title.education}}</h2>
     <hr>
     <div class="education">
         <p class="institution">
-            Псковский государственный университет
-            <a href="http://pskgu.ru" target="_blank"><i class="fa fa-external-link"></i></a>
+            {{edu.title}}
+            <a href="{{edu.url}}" target="_blank"><i class="fa fa-external-link"></i></a>
         </p>
-        <p class="faculty">
-            Факультет информатики, 2013
-        </p>
+        <p class="faculty">{{edu.faculty}}</p>
     </div>
 
-    <h2 class="section-title">Навыки (использовались в production)</h2>
+    <h2 class="section-title">{{title.skills_production}}</h2>
     <hr>
     <div class="row">
-        <div class="col-sm-3">
+    {% for item in me.skills_production %}
+        {% assign category = item[0] %}
+        {% assign skills = item[1] %}
+        <div class="{{me.skills_div_cls}}">
             <ul class="skills list-unstyled">
-                <li>PHP 5</li>
-                <li>Java 6-8</li>
-                <li>JavaScript</li>
-                <li>node.js</li>
-                <li>C++</li>
+                {% for skill in skills %}
+                    <li>{{skill}}</li>
+                {% endfor %}
             </ul>
         </div>
-
-        <div class="col-sm-3">
-            <ul class="skills list-unstyled">
-                <li>Qt 5</li>
-                <li>Spring Framework 4</li>
-                <li>Spring Boot</li>
-                <li>jQuery</li>
-                <li>Ext.JS 4</li>
-                <li>express</li>
-                <li>Twig</li>
-            </ul>
-        </div>
-
-        <div class="col-sm-3">
-            <ul class="skills list-unstyled">
-                <li>Linux (Debian, Ubuntu)</li>
-                <li>Git</li>
-                <li>Mercurial</li>
-                <li>Docker (engine, compose, machine)</li>
-                <li>nginx</li>
-                <li>Firebird 2.5</li>
-                <li>PostgreSQL 9</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-            </ul>
-        </div>
-
-        <div class="col-sm-3">
-            <ul class="skills list-unstyled">
-                <li>Ansible</li>
-                <li>Bower</li>
-                <li>Grunt</li>
-                <li>LESS</li>
-                <li>Leaflet</li>
-            </ul>
-        </div>
+    {% endfor %}
     </div>
 
-    <h2 class="section-title">Open source-проекты</h2>
+    <h2 class="section-title">{{title.opensource}}</h2>
     <hr>
-
     <ul class="nav nav-pills nav-justified opensource">
+        {% for item in me.opensource %}
         <li>
-            <a href="https://github.com/n-at" target="_blank">
-                <i class="fa fa-github"></i> GitHub
+            <a href="{{item[1].url}}" target="_blank">
+                <i class="{{item[1].icon_cls}}"></i> {{item[0]}}
             </a>
         </li>
-        <li>
-            <a href="https://bitbucket.org/n-at" target="_blank">
-                <i class="fa fa-bitbucket"></i> Bitbucket
-            </a>
-        </li>
-        <li>
-            <a href="https://gitlab.com/u/n-at" target="_blank">
-                <i class="fa fa-git"></i> GitLab
-            </a>
-        </li>
+        {% endfor %}
     </ul>
-
     <br>
-
     <ul class="list-unstyled projects">
+        {% for project in me.projects %}
         <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/notified">notified</a>
-            - JavaScript, node.js, MongoDB
+            {% assign name = project[0] %}
+            {% assign data = project[1] %}
+
+            {% case data.type %}
+            {% when "github" %}     <i class="fa fa-github"></i>
+            {% when "bitbucket" %}  <i class="fa fa-bitbucket"></i>
+            {% when "gitlab" %}     <i class="fa fa-git"></i>
+            {% else %}              <i class="fa fa-code"></i>
+            {% endcase %}
+
+            <a class="{{data.type}}" href="{{data.url}}">{{name}}</a>
+
+            {% if data.npm %}
+                <a class="npm" href="{{data.npm}}">NPM</a>
+            {% endif %}
+            {% if data.docker_hub %}
+                <a class="docker" href="{{data.docker_hub}}">Hub</a>
+            {% endif %}
+
+            - {{data.features}}
         </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/commander">commander</a>
-            - JavaScript, node.js, MongoDB, jQuery
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/documented">documented</a>
-            <a class="npm" href="https://www.npmjs.com/package/documented">NPM</a>
-            - JavaScript, node.js, jQuery
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/telegram-weather-bot">telegram-weather-bot</a>
-            - Java, maven, Telegram Bot API
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/arbirter">arbirter</a>
-            <a class="docker" href="https://hub.docker.com/r/atnurgaliev/arbirter/">Hub</a>
-            - Java, maven, Spring Boot, Eclipse BIRT
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/docker-kallithea">docker-kallithea</a>
-            <a class="docker" href="https://hub.docker.com/r/atnurgaliev/kallithea/">Hub</a>
-            - Docker
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/docker-ox-app-suite">docker-ox-app-suite</a>
-            - Docker
-        </li>
-        <li>
-            <i class="fa fa-github"></i>
-            <a class="github" href="https://github.com/n-at/docker-firebird2.5">docker-firebird2.5</a>
-            <a class="docker" href="https://hub.docker.com/r/atnurgaliev/firebird2.5/">Hub</a>
-            - Docker
-        </li>
+        {% endfor %}
     </ul>
 
-    <h2 class="section-title">Навыки (пока не использовались в production)</h2>
+    <h2 class="section-title">{{title.skills_not_production}}</h2>
     <hr>
     <div class="row">
-        <div class="col-sm-3">
-            <ul class="list-unstyled skills">
-                <li>Go</li>
-                <li>Kotlin</li>
-                <li>Python 2, 3</li>
-            </ul>
-        </div>
-
-        <div class="col-sm-3">
+    {% for item in me.skills_not_production %}
+        {% assign category = item[0] %}
+        {% assign skills = item[1] %}
+        <div class="{{me.skills_div_cls}}">
             <ul class="skills list-unstyled">
-                <li>AngularJS</li>
-                <li>React</li>
+                {% for skill in skills %}
+                <li>{{skill}}</li>
+                {% endfor %}
             </ul>
         </div>
-
-        <div class="col-sm-3">
-            <ul class="skills list-unstyled"></ul>
-        </div>
-
-        <div class="col-sm-3">
-            <ul class="skills list-unstyled"></ul>
-        </div>
+    {% endfor %}
     </div>
 
     <hr>
-
     <div class="footer text-center">
-        <div class="name text-muted">Alexey Nurgaliev, 2016</div>
+        <div class="name text-muted">{{title.footer}}</div>
     </div>
+
 </div>
 
 </body>

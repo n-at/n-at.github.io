@@ -1,0 +1,134 @@
+{
+  "title": {
+    "name": "Алексей Нургалиев",
+    "gravatar_id": "0a3cffedce512596ba158a45751c6478",
+    "html_title": "About me",
+    "education": "Образование",
+    "skills_production": "Навыки (использовались в production)",
+    "skills_not_production": "Навыки (пока не использовались в production)",
+    "opensource": "Open source-проекты",
+    "footer": "Alexey Nurgaliev, 2016"
+  },
+
+  "edu": {
+    "title": "Псковский государственный университет",
+    "url": "http://pskgu.ru/",
+    "faculty": "Факультет информатики, 2013"
+  },
+
+  "skills_div_cls": "col-sm-3",
+
+  "skills_production": {
+    "languages": [
+      "PHP 5",
+      "Java 6-8",
+      "JavaScript",
+      "node.js",
+      "C++"
+    ],
+    "frameworks": [
+      "Qt 5",
+      "Spring Framework",
+      "Spring Boot",
+      "jQuery",
+      "Ext.JS",
+      "express",
+      "Twig"
+    ],
+    "tools": [
+      "Linux (Debian, Ubuntu)",
+      "Git",
+      "Mercurial",
+      "Docker (engine, compose, machine)",
+      "nginx",
+      "Firebird 2.5",
+      "PostgreSQL 9",
+      "MongoDB",
+      "Redis"
+    ],
+    "other": [
+      "Ansible",
+      "Bower",
+      "Grunt",
+      "LESS",
+      "Leaflet"
+    ]
+  },
+
+  "skills_not_production": {
+    "lang": [
+      "Go",
+      "Kotlin",
+      "Python 2, 3"
+    ],
+    "frameworks": [
+      "AngularJS",
+      "React"
+    ],
+    "tools": [],
+    "other": []
+  },
+
+  "opensource": {
+    "GitHub": {
+      "url": "https://github.com/n-at",
+      "icon_cls": "fa fa-github"
+    },
+    "Bitbucket": {
+      "url": "https://bitbucket.org/n-at",
+      "icon_cls": "fa fa-bitbucket"
+    },
+    "GitLab": {
+      "url": "https://gitlab.com/u/n-at",
+      "icon_cls": "fa fa-git"
+    }
+  },
+
+  "projects": {
+    "notified": {
+      "type": "github",
+      "url": "https://github.com/n-at/documented",
+      "features": "JavaScript, node.js, MongoDB"
+    },
+    "commander": {
+      "type": "github",
+      "url": "https://github.com/n-at/commander",
+      "features": "JavaScript, node.js, MongoDB, jQuery"
+    },
+    "documented": {
+      "type": "github",
+      "url": "https://github.com/n-at/documented",
+      "npm": "https://www.npmjs.com/package/documented",
+      "features": "JavaScript, node.js, jQuery"
+    },
+    "telegram-weather-bot": {
+      "type": "github",
+      "url": "https://github.com/n-at/telegram-weather-bot",
+      "features": "Java, maven, Telegram Bot API"
+    },
+    "arbirter": {
+      "type": "github",
+      "url": "https://github.com/n-at/arbirter",
+      "docker_hub": "https://hub.docker.com/r/atnurgaliev/arbirter/",
+      "features": "Java, maven, Spring Boot, Eclipse BIRT"
+    },
+    "docker-kallithea": {
+      "type": "github",
+      "url": "https://github.com/n-at/docker-kallithea",
+      "docker_hub": "https://hub.docker.com/r/atnurgaliev/kallithea/",
+      "features": "Docker"
+    },
+    "docker-ox-app-suite": {
+      "type": "github",
+      "url": "https://github.com/n-at/docker-ox-app-suite",
+      "features": "Docker"
+    },
+    "docker-firebird2.5": {
+      "type": "github",
+      "url": "https://github.com/n-at/docker-firebird2.5",
+      "docker_hub": "https://hub.docker.com/r/atnurgaliev/firebird2.5/",
+      "features": "Docker"
+    }
+  }
+
+}
