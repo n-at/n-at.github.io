@@ -101,6 +101,11 @@
       "npm": "https://www.npmjs.com/package/documented",
       "features": "JavaScript, node.js, jQuery"
     },
+    "post-tracking-service": {
+      "type": "github",
+      "url": "https://github.com/n-at/post-tracking-service",
+      "features": "Java, maven, JavaScript, React, jQuery, Russian Post Tracking API"
+    },
     "telegram-weather-bot": {
       "type": "github",
       "url": "https://github.com/n-at/telegram-weather-bot",
