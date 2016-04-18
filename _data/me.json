@@ -104,12 +104,17 @@
     "post-tracking-service": {
       "type": "github",
       "url": "https://github.com/n-at/post-tracking-service",
-      "features": "Java, maven, JavaScript, React, jQuery, Russian Post Tracking API"
+      "features": "Java, maven, Spring, Spring Boot, JavaScript, React, jQuery, Russian Post Tracking API"
     },
     "telegram-weather-bot": {
       "type": "github",
       "url": "https://github.com/n-at/telegram-weather-bot",
       "features": "Java, maven, Telegram Bot API"
+    },
+    "math-quiz-bot": {
+      "type": "github",
+      "url": "https://github.com/n-at/math-quiz-bot",
+      "features": "Java, maven, Spring, Spring Boot, Telegram Bot API 2.0"
     },
     "arbirter": {
       "type": "github",
