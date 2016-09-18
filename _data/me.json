@@ -32,8 +32,7 @@
       "Spring Boot",
       "jQuery",
       "Ext.JS",
-      "express",
-      "Twig"
+      "express"
     ],
     "tools": [
       "Linux (Debian, Ubuntu)",
@@ -51,7 +50,10 @@
       "Bower",
       "Grunt",
       "LESS",
-      "Leaflet"
+      "Leaflet",
+      "Flyway",
+      "H2",
+      "Hibernate"
     ]
   },
 
@@ -121,6 +123,11 @@
       "url": "https://github.com/n-at/arbirter",
       "docker_hub": "https://hub.docker.com/r/atnurgaliev/arbirter/",
       "features": "Java, maven, Spring Boot, Eclipse BIRT"
+    },
+    "availability-monitor": {
+      "type": "github",
+      "url": "https://github.com/n-at/availability-monitor",
+      "features": "Java, maven, Spring Boot, Spring Data JPA, H2, Flyway, Bootstrap"
     },
     "docker-kallithea": {
       "type": "github",
