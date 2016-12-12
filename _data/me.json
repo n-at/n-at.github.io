@@ -129,6 +129,11 @@
       "url": "https://github.com/n-at/availability-monitor",
       "features": "Java, maven, Spring Boot, Spring Data JPA, H2, Flyway, Bootstrap"
     },
+    "releases-stream": {
+      "type": "github",
+      "url": "https://github.com/n-at/releases-stream",
+      "features": "Java, maven, Spring Boot, Spring Data JPA, H2, Flyway, ROME, GitHub API"
+    },
     "docker-kallithea": {
       "type": "github",
       "url": "https://github.com/n-at/docker-kallithea",
