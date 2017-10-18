@@ -92,22 +92,6 @@
         {% endfor %}
     </ul>
 
-    <h2 class="section-title">{{title.skills_not_production}}</h2>
-    <hr>
-    <div class="row">
-    {% for item in me.skills_not_production %}
-        {% assign category = item[0] %}
-        {% assign skills = item[1] %}
-        <div class="{{me.skills_div_cls}}">
-            <ul class="skills list-unstyled">
-                {% for skill in skills %}
-                <li>{{skill}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endfor %}
-    </div>
-
     <hr>
     <div class="footer text-center">
         <div class="name text-muted">{{title.footer}}</div>

@@ -4,10 +4,9 @@
     "gravatar_id": "0a3cffedce512596ba158a45751c6478",
     "html_title": "About me",
     "education": "Образование",
-    "skills_production": "Навыки (использовались в production)",
-    "skills_not_production": "Навыки (пока не использовались в production)",
+    "skills_production": "Навыки",
     "opensource": "Open source-проекты",
-    "footer": "Alexey Nurgaliev, 2016"
+    "footer": "Alexey Nurgaliev, 2017"
   },
 
   "edu": {
@@ -20,16 +19,16 @@
 
   "skills_production": {
     "languages": [
-      "PHP 5",
       "Java 6-8",
       "JavaScript",
+      "PHP 5",
       "node.js",
       "C++"
     ],
     "frameworks": [
-      "Qt 5",
       "Spring Framework",
       "Spring Boot",
+      "Qt 5",
       "jQuery",
       "Ext.JS",
       "express"
@@ -40,35 +39,21 @@
       "Mercurial",
       "Docker (engine, compose, machine)",
       "nginx",
-      "Firebird 2.5",
-      "PostgreSQL 9",
+      "Firebird",
+      "PostgreSQL",
       "MongoDB",
       "Redis"
     ],
     "other": [
       "Ansible",
-      "Bower",
       "Grunt",
       "LESS",
       "Leaflet",
       "Flyway",
       "H2",
-      "Hibernate"
+      "Hibernate",
+      "..."
     ]
-  },
-
-  "skills_not_production": {
-    "lang": [
-      "Go",
-      "Kotlin",
-      "Python 2, 3"
-    ],
-    "frameworks": [
-      "AngularJS",
-      "React"
-    ],
-    "tools": [],
-    "other": []
   },
 
   "opensource": {
