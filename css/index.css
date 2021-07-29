@@ -6,11 +6,11 @@ body {
 .gradient-box {
   padding: 150px 0;
   color: white;
-  background: linear-gradient(to bottom right, #16a085 25%, #f1c40f 75%);
+  background: linear-gradient(to bottom right, #07406c 25%, #0b6bf3 75%);
 }
 .gradient-box h1 {
     font-family: 'Jura', sans-serif;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .footer {
@@ -25,13 +25,13 @@ body {
     margin-top: 10px;
 }
 .footer .social a {
-    color: #16a085;
+    color: #07406c;
     margin-left: 15px;
     font-size: 1.5em;
 }
 .footer .social a:hover,
 .footer .social a:active{
-    color: #f1c40f;
+    color: #0b6bf3;
     text-decoration: none;
 }
 
