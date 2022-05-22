@@ -1,16 +1,14 @@
-body {
-    padding-top: 50px;
-    background-color: #fafafa;
+.title {
+    background: url('background.svg') center;
+    background-size: cover;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    margin-top: 5em;
 }
-
-.gradient-box {
-  padding: 150px 0;
-  color: white;
-  background: linear-gradient(to bottom right, #07406c 25%, #0b6bf3 75%);
-}
-.gradient-box h1 {
+.container h1 {
     font-family: 'Jura', sans-serif;
     font-size: 5em;
+    color: #fff;
 }
 
 .footer {
